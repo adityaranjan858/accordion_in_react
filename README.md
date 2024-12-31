@@ -1,7 +1,5 @@
 # Accordion in React
 
-![alt text](image.png) <!-- Replace this with an actual image link if available -->
-
 ## Overview
 
 This is a simple Accordion component built with React. It allows users to click on questions to reveal corresponding answers in a clean, interactive way. The Accordion is a great UI pattern for displaying information where certain sections can be expanded or collapsed, helping to conserve space and enhance user experience.

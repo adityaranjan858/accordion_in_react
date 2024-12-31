@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from 'prop-types';
 
 const Accordion = ({lists}) => {
     // State for managing the currently active item
@@ -29,6 +30,13 @@ const Accordion = ({lists}) => {
     </ul>
     </>
   )
+}
+
+Accordion.propTypes = {
+    lists : PropTypes.array
+}
+Accordion.defaultProps = {
+    lists : []
 }
 
 export default Accordion;

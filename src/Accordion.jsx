@@ -12,9 +12,9 @@ const Accordion = ({lists}) => {
     return (
     <>
     <h1 className="text-center underline mb-20">Accordion in React</h1>
-    <ul className="sm:w-8/12 md:w-6/12 mx-auto">
+    <ul className="sm:w-8/12 md:w-6/12 mx-auto shadow-2xl ">
         {lists.map((item, index)=>{
-            return(<li key={index} className={`cursor-pointer ${activeIndex === index ? "bg-gray-300" : "bg-gray-100"} border border-slate-500`} onClick={()=>toggleHandler(index)}>
+            return(<li key={index} className={`cursor-pointer ${activeIndex === index ? "bg-gray-400" : "bg-lightGray"}`} onClick={()=>toggleHandler(index)}>
                <div className="flex p-3 justify-between items-center font-bold">
                     <span className="">
                     {item.title}

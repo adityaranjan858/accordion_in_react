@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from 'prop-types';
 
-const Accordion = ({lists}) => {
+const Accordion = ({lists, title}) => {
     // State for managing the currently active item
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -12,7 +12,7 @@ const Accordion = ({lists}) => {
 
     return (
     <>
-    <h1 className="text-center underline mb-20">Accordion in React</h1>
+    <h1 className="text-center underline mb-20">{title.length > 0 ? title : "Accordion in React"}</h1>
     <ul className="sm:w-8/12 md:w-6/12 mx-auto shadow-2xl ">
         {lists.map((item, index)=>{
             return(<li key={index} className={`cursor-pointer ${activeIndex === index ? "bg-gray-400" : "bg-lightGray"}`} onClick={()=>toggleHandler(index)}>
@@ -33,7 +33,8 @@ const Accordion = ({lists}) => {
 }
 
 Accordion.propTypes = {
-    lists : PropTypes.array
+    lists : PropTypes.array,
+    title : PropTypes.string
 }
 Accordion.defaultProps = {
     lists : []

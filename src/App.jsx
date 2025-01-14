@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <Accordion lists={data}/>
+      <Accordion title="" lists={data}/>
     </>
   )
 }
